@@ -3,9 +3,8 @@ import { useFollowup } from "../hooks/useFollowup";
 import SimpleMarkdown from "../components/SimpleMarkdown";
 import { useEffect, useRef } from "react";
 
-export default function TabFollowupPanel({ sessionId, tab }) {
-
-  const { ask, history, loading } = useFollowup(sessionId, tab);
+export default function TabFollowupPanel({ sessionId, tab, initialHistory = [] }) {
+  const { ask, history, loading } = useFollowup(sessionId, tab, initialHistory)
 
   const bottomRef = useRef(null);
 

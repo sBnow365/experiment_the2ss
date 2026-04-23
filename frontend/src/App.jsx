@@ -51,7 +51,7 @@ function App() {
         formData,
         {
           headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWU4YzlmZTFiNTliYzMxZGJiMzM1YTEiLCJleHAiOjE3Nzc0Njg1NDJ9.haeJmdloHnK8Db6bzyET6lt7ImMdIXxqdY7jImW76_U"
+            Authorization: `Bearer ${localStorage.getItem("token")}`
           }
         }
       );

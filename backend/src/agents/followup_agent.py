@@ -10,7 +10,7 @@ class FollowupAgent:
 
         genai.configure(api_key=GEMINI_API_KEY)
 
-        self.model = genai.GenerativeModel("gemini-2.5-flash")
+        self.model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
     def ask(self, tab: str, previous_context: str, history: list, question: str):
 

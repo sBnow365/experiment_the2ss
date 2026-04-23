@@ -34,7 +34,7 @@ export async function askFollowup(sessionId, tab, question, history) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWU4YzlmZTFiNTliYzMxZGJiMzM1YTEiLCJleHAiOjE3Nzc0Njg1NDJ9.haeJmdloHnK8Db6bzyET6lt7ImMdIXxqdY7jImW76_U`
+      "Authorization": `Bearer ${localStorage.getItem("token")}`
     },
     body: JSON.stringify({
       session_id: sessionId,

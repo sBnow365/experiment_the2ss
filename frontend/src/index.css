@@ -70,7 +70,15 @@ button:focus-visible {
   0%   { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: #111;
+}
 /* The minimum needed to make Markdown look like an actual page */
 .markdown-body h1, .markdown-body h2 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; }
 .markdown-body p { margin-bottom: 16px; }

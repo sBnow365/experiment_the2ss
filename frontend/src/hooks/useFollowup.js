@@ -1,15 +1,15 @@
 import { useState } from "react";
 import {askFollowup} from "../services/api"; // 👈 import saveFollowup
 
-export function useFollowup(sessionId, tab) {
+export function useFollowup(sessionId, tab, initialHistory = []) {
 
   const [loading, setLoading] = useState(false);
 
   const [historyMap, setHistoryMap] = useState({
-    culture: [],
-    geo: [],
-    travel: [],
-    news: []
+    culture: initialHistory.filter(c => c.tab === "culture"),
+    geo: initialHistory.filter(c => c.tab === "geo"),
+    travel: initialHistory.filter(c => c.tab === "travel"),
+    news: initialHistory.filter(c => c.tab === "news")
   });
 
   const history = historyMap[tab] || [];

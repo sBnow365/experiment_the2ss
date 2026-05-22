@@ -26,7 +26,7 @@ app.include_router(images_router)
 app.include_router(explorations_router)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173","https://the2ss-35zj.vercel.app"],  # Later restrict
+    allow_origins=["http://localhost:5173","https://the2ss-35zj.vercel.app", "https://experiment-the2ss-1.onrender.com"],  # Later restrict
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
